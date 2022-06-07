@@ -27,7 +27,11 @@ int main() {
             if (e.what() == name_exception)
                 cout << "Negative Balance: " << accountInfo[i]->getBalance() << endl;
         }
+
+        delete accountInfo[i];
     }
+
+    delete[] accountInfo;
 
     return 0;
 }
